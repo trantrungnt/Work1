@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -11,20 +13,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button btnSend = (Button) this.findViewById(R.id.btnSend);
+        btnSend.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        typeInput();
+        typeInput(v);
     }
 
     //phuong thuc nhap du lieu tu EditText
-    private void typeInput()
+    private void typeInput(View v)
     {
-        //String inputData;
-        //inputData = this.findViewById(R.id.editInput).toString();
+        int id = v.getId();
+        if(id == R.id.btnSend)
+        {
 
-        Intent intentData = new Intent(this, DisplayActivity.class);
-        startActivity(intentData);
+            String inputData;
+            inputData = ((EditText) findViewById(R.id.editInput)).getText().toString();
+            Bundle bundle = new Bundle();
+            bundle.putString("KeyData", inputData);
+
+            Intent intentData = new Intent(this, DisplayActivity.class);
+            intentData.putExtras(bundle);
+
+            startActivity(intentData);
+        }
+
     }
 }
