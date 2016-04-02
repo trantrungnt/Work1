@@ -17,6 +17,7 @@
         android:layout_marginLeft="120dp"
         android:layout_marginTop="60dp"
         android:text="@string/label_button_send"
+        android:id="@+id/btnSend"
         android:layout_width="150dp"
         android:layout_height="50dp" />
 </LinearLayout>
