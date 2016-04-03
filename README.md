@@ -39,7 +39,7 @@
 + App Android dùng api22 
 + Dùng máy ảo Genymotion với hệ điều hành Android version 5.1
 
-##Tham kham khảo
+##Tham khảo
 + [Android Alert Dialog example](http://www.mkyong.com/android/android-alert-dialog-example/)
 + [Style any activity as an Alert Dialog in Android](http://www.codeproject.com/Tips/623446/Style-Any-Activity-as-an-Alert-Dialog-in-Android)
 + [Android Custom Dialog box sample code](http://www.mysamplecode.com/2011/06/android-custom-dialog-box-sample-code.html)
