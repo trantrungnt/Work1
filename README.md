@@ -35,6 +35,48 @@
         txtDisplay.setText(strTemp);
 ```
 
++ Kiểm tra dữ liệu nếu trống hoặc null thì dùng Alert Dialog thông báo cho người dùng phải nhập dữ liệu
+```
+ int id = v.getId();
+        if(id == R.id.btnSend)
+        {
+            String inputData;
+            inputData = ((EditText) findViewById(R.id.editInput)).getText().toString();
+            if (inputData.isEmpty() || inputData == null)
+            {
+                Context context = this;
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+                // set title
+                alertDialogBuilder.setTitle("WARNING ...");
+
+                // set dialog message
+                alertDialogBuilder
+                        .setMessage("You need to type your data!")
+                        .setCancelable(false)
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+
+                // create alert dialog
+                AlertDialog alertDialog = alertDialogBuilder.create();
+
+                // show it
+                alertDialog.show();
+            }
+            else {
+                Bundle bundle = new Bundle();
+                bundle.putString("KeyData", inputData);
+
+                Intent intentData = new Intent(MainActivity.this, DisplayActivity.class);
+                intentData.putExtras(bundle);
+
+                startActivity(intentData);
+            }
+        }
+```
+
 ##Thông tin app Android 
 + App Android dùng api22 
 + Dùng máy ảo Genymotion với hệ điều hành Android version 5.1
