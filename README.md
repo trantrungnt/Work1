@@ -44,4 +44,3 @@
 + [Style any activity as an Alert Dialog in Android](http://www.codeproject.com/Tips/623446/Style-Any-Activity-as-an-Alert-Dialog-in-Android)
 + [Android Custom Dialog box sample code](http://www.mysamplecode.com/2011/06/android-custom-dialog-box-sample-code.html)
 + [Android alert dialog](http://www.tutorialspoint.com/android/android_alert_dialoges.htm)
-+ 
